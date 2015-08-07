@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Training</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <header>
+        
+        </header>
+        
+        <main>
+        
+            <section class="exercises">
+            
+                <!-- EXERCISE 1 -->
+                <article id="exercise-1" class="exercise">
+                    <h2>Exercise 1</h2>
+                    <p class="exercise-description">
+                    Write an isPrime() function that returns true if a number is prime and false otherwise.
+                    </p>
+                    <input id="prime-number" type="number" name="primeNumber" />
+                    
+                    <button type="submit" onclick="exercise1Handler(document.getElementById('prime-number').value)">Is Prime?</button>
+                    
+                    <div id="result-1"></div>
+                
+                </article>
+                
+                <!-- EXERCISE 2 -->
+                <article id="exercise-2" class="exercise">
+                    
+                    <h2>Exercise 2</h2>
+                    <p class="exercise-description">
+                    Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen. (For ex: “0 is even”, “1 is odd”, “2 is even”)
+                    </p>
+                    
+                    <button type="submit" onclick="exercise2Handler()">Run!</button>
+                    
+                    <div id="result-2"></div>
+                
+                </article>
+                
+                <article id="exercise-3" class="exercise">
+                
+                    <h2>Exercise 3</h2>
+                    <p class="exercise-description">
+                        Write a JavaScript program to sum the multiples of 3 and 5 under 1000
+                    </p>
+                    
+                    <button type="submit" onclick="exercise3Handler()">Run!</button>
+                    
+                    <div id="result-3"></div>
+                
+                
+                </article>
+                
+                <article id="exercise-4" class="exercise">
+                
+                    <h2>Exercise 4</h2>
+                    <p class="exercise-description">
+    Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+                    </p>
+                    
+                    <button type="submit" onclick="exercise4Handler()">Run!</button>
+                    
+                    <div id="result-4"></div>
+                
+                
+                </article>
+                
+                <article id="exercise-5" class="exercise">
+                
+                    <h2>Exercise 5</h2>
+                    <p class="exercise-description">
+                    Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a 
+message "Good Work" otherwise display a message "Not matched"
+                    </p>
+                    
+                    <input id="guess-number" type="number" name="primeNumber" />
+                    
+                    <button type="submit" onclick="exercise5Handler(document.getElementById('guess-number').value)">Guess!</button>
+                                        
+                    <div id="result-5"></div>
+                
+                
+                </article>
+                
+            </section>
+            
+        </main>
+        
+        
+        <footer>
+            
+        </footer>
+        
+        
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="exercises.js"></script>
+        
+    </body>
+</html>
