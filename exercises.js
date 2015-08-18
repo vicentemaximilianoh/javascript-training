@@ -81,12 +81,99 @@ message "Good Work" otherwise display a message "Not matched"
         
     };
     
+    /* 
+    Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+    */
+    var exercise6a = function exercise6(number1, number2) {
+        if(isNaN(number1) || isNaN(number2)){
+            return "You must enter 2 numbers.";
+        }
+        
+        return number1*number2;        
+    };
+    var exercise6b = function exerciseb(number1, number2) {
+        if(isNaN(number1) || isNaN(number2)){
+            return "You must enter 2 numbers.";
+        }
+        
+        if(number2 === 0){
+            return "You can't divide by 0.";
+        }
+        return number1/number2;        
+    };
+    
+    /*
+    Write a JavaScript program that accept two integers and display the larger.
+    */
+    var exercise7 = function exercise7(number1, number2){
+        
+        if(isNaN(number1) || isNaN(number2)){
+            return "You must enter 2 numbers.";
+        }
+        
+        if(number1 > number2){
+            return number1;
+        }else if (number2 > number1){
+            return number2;
+        }else{
+            return "The numbers are equal.";
+        }
+        
+    };
+    
+    var exercise8 = function exercise8(word){
+        var subword1 = word.split("");
+        var subword2 = word.split("").reverse();
+        
+        var length = Math.floor(word.length/2);    
+        
+        for(var i=0; i < length; i++) {
+            if(subword1[i] !== subword2[i]){
+                return false;
+            }
+        }
+        return true;
+        
+    };
+    
+    var exercise9 = function exercise9(number1, number2, number3){
+        
+        if(number1 > number2 && number1 > number3){
+            if(number2 > number3){
+                return [number3, number2, number1];
+            }else{
+                return [number2, number3, number1];
+            }
+        }
+        
+        if(number2 > number1 && number2 > number3){
+            if(number1 > number3){
+                return [number3, number1, number2];
+            }else{
+                return [number1, number3, number2];
+            }
+        }
+        
+        if(number3 > number1 && number3 > number2){
+            if(number1 > number2){
+                return [number2, number1, number3];
+            }else{
+                return [number1, number2, number3];
+            }
+        }
+    };
+    
     return {
         exercise1: exercise1,
         exercise2: exercise2,
         exercise3: exercise3,
         exercise4: exercise4,
-        exercise5: exercise5
+        exercise5: exercise5,        
+        exercise6a: exercise6a,        
+        exercise6b: exercise6b,
+        exercise7: exercise7,        
+        exercise8: exercise8,        
+        exercise9: exercise9
     }
     
 })();

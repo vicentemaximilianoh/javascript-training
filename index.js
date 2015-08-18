@@ -43,3 +43,52 @@ function exercise5Handler(number){
     resultContent.innerHTML = exercises.exercise5(number);
     
 };
+
+function exercise6Handler(number1, number2){
+    
+    var number1 = parseInt(number1);
+    var number2 = parseInt(number2);
+    
+    var resultContent = document.getElementById('result-6');
+    resultContent.innerHTML = number1+ " * "+ number2 + " = " + exercises.exercise6a(number1, number2);
+    resultContent.innerHTML += '<br/>' + number1 + " / "+ number2 + " = " + exercises.exercise6b(number1, number2);
+    
+};
+
+function exercise7Handler(number1, number2){
+    
+    var number1 = parseInt(number1);
+    var number2 = parseInt(number2);
+    
+    var resultContent = document.getElementById('result-7');
+    resultContent.innerHTML = "The higher number is " + exercises.exercise7(number1, number2);
+    
+    
+};
+
+function exercise8Handler(word){
+    
+    var resultContent = document.getElementById('result-8');
+    
+    if(word.length === 0){
+        resultContent.innerHTML = "You must enter a value.";
+    }else{    
+        resultContent.innerHTML = "The word " + word + " is palidrome: " + exercises.exercise8(word);
+    }
+    
+    
+};
+
+
+function exercise9Handler(number1, number2, number3){
+        
+    var result = exercises.exercise9(number1, number2, number3);
+    var resultContent = "";
+    
+    for(var i=0; i < result.length; i++){
+        resultContent += result[i] + " - ";
+    }    
+    window.alert(resultContent);
+    
+};
+
