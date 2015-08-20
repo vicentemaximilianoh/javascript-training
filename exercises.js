@@ -163,6 +163,85 @@ message "Good Work" otherwise display a message "Not matched"
         }
     };
     
+    
+    /************************************************
+                    EXERCISE 10
+    ************************************************/
+    
+    var exercise10 = function exercise10(number1, number2){
+        
+        var divisorsNbr1 = getDivisors(number1);
+        var divisorsNbr2 = getDivisors(number2);
+        var commonDivisors = [];
+        
+        var l1 = divisorsNbr1.length;        
+        var l2 = divisorsNbr2.length;
+        for(var i=0; i < l1; i++){
+            for(var j=0; j < l2; j++){
+                if (divisorsNbr1[i] === divisorsNbr2[j]){
+                    commonDivisors.push(divisorsNbr1[i]);
+                    divisorsNbr2.splice(j,1);
+                    break;
+                }
+            }
+        }
+        
+        var commLength = commonDivisors.length;
+        var result;
+        for(var i=0; i < commLength; i++){
+            result = (!result) ?commonDivisors[i] : result * commonDivisors[i];
+        }
+        console.log(commonDivisors);
+        return result;
+    };
+    
+    var getDivisors = function getDivisors(number){
+        var divisor = 2;
+        var auxNumber = number;
+        var divisorsNbr = [];
+        
+        while(divisor <= auxNumber){
+            
+            if(auxNumber % divisor === 0){
+                auxNumber = auxNumber/divisor;
+                divisorsNbr.push(divisor);
+            }else{
+                divisor++;
+            }
+        }
+        
+        console.log(divisorsNbr);
+        return divisorsNbr;
+    };
+    
+    
+    var exercise11 = function exercise11(number1, number2, number3){
+        
+        var numbers = [number1, number2, number3];
+        var countNegatives = 0;
+        for(var i=0; i < numbers.length; i++){
+            if(numbers[i] < 0) {
+                countNegatives++;
+            }
+        }
+        
+        var sign = (countNegatives % 2 !== 0) ? "-" : "+";
+        return sign;
+        
+    };
+    
+    var exercise12 = function exercise12(number1, number2){
+        
+        if(number2 === undefined){
+            return function(number2){
+                return number1 + number2;
+            }
+        }else{
+            return number1 + number2;
+        }
+        
+    };
+    
     return {
         exercise1: exercise1,
         exercise2: exercise2,
@@ -173,7 +252,10 @@ message "Good Work" otherwise display a message "Not matched"
         exercise6b: exercise6b,
         exercise7: exercise7,        
         exercise8: exercise8,        
-        exercise9: exercise9
+        exercise9: exercise9,
+        exercise10: exercise10,
+        exercise11: exercise11,
+        exercise12: exercise12
     }
     
 })();

@@ -159,6 +159,289 @@ message "Good Work" otherwise display a message "Not matched"
                 </article>
                 
                 
+                <article id="exercise-10" class="exercise">
+                
+                    <h2>Exercise 10</h2>
+                    <p class="exercise-description">Write a JavaScript program to compute the greatest common divisor (GCD) of two positive integers.
+                    </p>
+                    
+                    <input id="exercise10-number1" type="number" name="exercise10-number1" />
+                    <input id="exercise10-number2" type="number" name="exercise10-number2" />
+                    
+                    <button type="submit" onclick="exercise10Handler(document.getElementById('exercise10-number1').value, document.getElementById('exercise10-number2').value)">Get GCD!</button>
+                                        
+                    <div id="result-10"></div>
+                
+                
+                </article>
+                
+                
+                
+                <article id="exercise-11" class="exercise">
+                
+                    <h2>Exercise 11</h2>
+                    <p class="exercise-description">Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box
+with the specified sign. (For ex: 3, -7, 2 Output: The sign is - )
+                    </p>
+                    
+                    <input id="exercise11-number1" type="number" name="exercise11-number1" />
+                    <input id="exercise11-number2" type="number" name="exercise11-number2" />
+                    <input id="exercise11-number3" type="number" name="exercise11-number3" />
+                    
+                    <button type="submit" onclick="exercise11Handler(document.getElementById('exercise11-number1').value, document.getElementById('exercise11-number2').value, document.getElementById('exercise11-number3').value)">Get result!</button>
+                                        
+                    <div id="result-11"></div>
+                
+                
+                </article>
+                
+                
+                
+                
+                <article id="exercise-12" class="exercise">
+                
+                    <h2>Exercise 12</h2>
+                    <p class="exercise-description">
+                    </p>
+                    
+                    <input id="exercise12-number1" type="number" name="exercise11-number1" />
+                    <input id="exercise12-number2" type="number" name="exercise11-number2" />
+                    
+                    <button type="submit" onclick="exercise12Handler(document.getElementById('exercise12-number1').value, document.getElementById('exercise12-number2').value)">Get result!</button>
+                                        
+                    <div id="result-12"></div>
+                
+                
+                </article>
+                
+                
+                <article id="exercise-13" class="exercise">
+                
+                    <h2>Exercise 13</h2>
+                    <p class="exercise-description">
+                        What will be the output when the following code is executed? Explain
+                    </p>
+                    
+                    <p class="">
+                        <b>"0" == false</b> is true because both values are converted to integer and then the comparison is performed.
+                    </p>
+                    
+                    <p class="">
+                        <b>"0" === false</b> is false because both values are compared without doing any conversion.
+                    </p>
+                                          
+                    <div id="result-13"></div>
+                
+                </article>
+                
+                
+                <article id="exercise-14" class="exercise">
+                
+                    <h2>Exercise 14</h2>
+                    <p class="exercise-description">
+                        What will the code below output to the console and why ?
+                    </p>
+                    
+                    <p class="">
+                        <b>1 + +"2" + "2"</b> = "122". Plus symbol in both cases are interpreted as a concatenation.
+                    </p>
+                    <p class="">
+                        <b>1 + +"2" + "2"</b> = "32". Plus symbol before the "2" is interpreted as a conversion to number (1 + +"2" = 1 + 2 = 3). And then the last plus is performed as a concatenation.
+                    </p>
+                    <p class="">
+                        <b>1 + "1" + "2"</b> = "02". Minus symbol before the "1" is interpreted as a conversion to number (1 + +"1" = 1 - 1 = 0). And then the last plus is performed as a concatenation.
+                    </p>
+                    <p class="">
+                        <b>+"1" + "1" + "2"</b> = "112". Plus symbol before the first "1" is interpreted as a conversion to number (+"1" = 1). And then the others plus symbols are performed as a concatenation.
+                    </p>
+                    <p class="">
+                        <b>+"A" - "B" + "2"</b> = "NaN2". Subtraction between 2 letters is performed as a NaN. And then the other plus symbols are performed as a concatenation. So the result is "NaN2".
+                    </p>
+                    <p class="">
+                        <b>+"A" - "B" + 2</b> = "NaN2". Subtraction between 2 letters is performed as a NaN. And then the other plus symbols are performed as a addition. So the result is NaN.
+                    </p>
+                    
+                                          
+                    <div id="result-14"></div>
+                
+                </article>
+                
+                <article id="exercise-15" class="exercise">
+                
+                    <h2>Exercise 15</h2>
+                    <p class="exercise-description">
+                        What is the output out of the following code? Explain your answer.
+                        <pre>
+var a={},b={key:'b'},c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+                        </pre>
+                    </p>
+                    
+                    <p class="">
+                        The output is <b>456</b> because when an object is assigned to a key object the key value is "[object Object]". Therefore, when another object is assigned as a property of this object, the "[object Object]" key value is overriden.
+                    </p>
+                                          
+                    <div id="result-15"></div>
+                
+                </article>
+            
+            
+                <article id="exercise-16" class="exercise">
+                
+                    <h2>Exercise 16</h2>
+                    <p class="exercise-description">
+                        What would the following lines of code output to the console?
+                    </p>
+                    
+                    <p class="">
+                        <b>"0 || 1 = 1"</b>The output is 1 because when operators aren't boolean, the logical operator "||" returns first expresion if it can be converted to true; otherwise return the second one.
+                    </p>
+                     
+                    <p class="">
+                        <b>"1 || 2 = 1"</b>The output is 2 because when operators aren't boolean, the logical operator "||" first expresion if it can be converted to true; otherwise return the second one.
+                    </p>  
+                    
+                    <p class="">
+                        <b>"0 &amp;&amp; 1 = 0"</b>The output is 0 because when operators aren't boolean, the logical operator "&amp;&amp;" returns first expresion if it can be converted to false; otherwise return the second one.
+                    </p>
+                    <p class="">
+                        <b>"1 &amp;&amp; 2 = 2"</b>The output is 2 because when operators aren't boolean, the logical operator "&amp;&amp;" returns first expresion if it can be converted to false; otherwise return the second one.
+                    </p>                       
+                    <div id="result-16"></div>
+                
+                </article>
+            
+            
+            
+            
+                <article id="exercise-17" class="exercise">
+                
+                    <h2>Exercise 17</h2>
+                    <p class="exercise-description">
+                        What will the code below output to the console and why?
+                        <pre>
+var myObject={
+    foo:"bar",
+    func:function(){
+
+        var self=this;
+
+        console.log("outerfunc: this.foo="+this.foo);
+        console.log("outerfunc: self.foo="+self.foo);
+
+        (function(){
+            console.log("innerfunc: this.foo="+this.foo);
+            console.log("innerfunc: self.foo="+self.foo);
+
+        }());
+    }
+};
+
+myObject.func();
+                        </pre>
+                    </p>
+                    
+                    <p class="">
+                        <b>console.log("outerfunc: this.foo="+this.foo);</b>
+                        Output is "bar" because this is the object.
+                    </p>   
+                    <p class="">
+                        <b>console.log("outerfunc: self.foo="+self.foo);</b>
+                        Output is "bar" because self is the object.
+                    </p> 
+                    <p class="">
+                        <b>console.log("innerfunc: this.foo="+this.foo);</b>
+                        Output is undefined because this is the inner function and no the object.
+                    </p> 
+                    <p class="">
+                        <b>console.log("innerfunc: self.foo="+self.foo);</b>
+                        Output is "bar" self is myObject object.
+                    </p>                   
+                    <div id="result-17"></div>
+                
+                </article>
+            
+        
+        
+                <article id="exercise-18" class="exercise">
+                
+                    <h2>Exercise 18</h2>
+                    <p class="exercise-description">
+                        What’s the output of the following code?
+                        <pre>
+console.log(typeof null); => "object"
+console.log(typeof {}); => "object"
+console.log(typeof []); => "object"
+console.log(typeof undefined); => "undefined"
+                        </pre>
+                    </p>               
+                    <div id="result-18"></div>
+                
+                </article>
+            
+
+                <article id="exercise-19" class="exercise">
+                
+                    <h2>Exercise 19</h2>
+                    <p class="exercise-description">
+                        What’s the result of executing this code and why:
+                        <pre>
+function test(){
+    console.log(a); => undefined
+    console.log(foo()); => 2
+    var a=1;
+
+    function foo(){
+        return 2;
+    }
+}
+
+test();
+                        </pre>
+                    </p>               
+                    <div id="result-19"></div>
+                
+                </article>
+
+
+
+                <article id="exercise-20" class="exercise">
+                
+                    <h2>Exercise 20</h2>
+                    <p class="exercise-description">
+                        Complete with the expected output and justify:
+                        <pre>
+(function(){
+
+    console.log(bar);//OUTPUT: If below line is commented it will return "undefined" because bar is not defined yet.
+
+    console.log(baz);//OUTPUT: "baz is not defined" error.
+
+    foo();//OUTPUT: If above line is commented it will return 'aloha' in the console.
+
+    function foo(){
+        console.log('aloha');
+    }
+
+    var bar=1;
+
+    baz=2;
+
+})();
+                        </pre>
+                    </p>  
+
+                    <p>
+                        Output will return an "baz is not defined" error.
+                    </p>
+                    <div id="result-19"></div>
+                
+                </article>
+                
             </section>
             
         </main>

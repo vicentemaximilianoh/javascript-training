@@ -92,3 +92,43 @@ function exercise9Handler(number1, number2, number3){
     
 };
 
+
+
+function exercise10Handler(number1, number2){
+        
+    var resultContent = document.getElementById('result-10');
+    
+    var result = exercises.exercise10(number1, number2);
+        resultContent.innerHTML = "The GCD is " + result;
+    
+    
+};
+
+
+
+function exercise11Handler(number1, number2, number3){
+        
+    var resultContent = document.getElementById('result-11');
+    
+    var result = exercises.exercise11(number1, number2, number3);
+        resultContent.innerHTML = "Output: The sign is " + result;
+    
+    
+};
+
+
+function exercise12Handler(number1, number2){
+    
+    var number1 = parseInt(number1);
+    var number2 = parseInt(number2);
+    
+    var resultContent = document.getElementById('result-12');
+    
+    var result = exercises.exercise12(number1, number2);
+        resultContent.innerHTML = "The result is " + result;
+    
+    
+    result = exercises.exercise12(number1)(number2);
+        resultContent.innerHTML += "<br/>The result is " + result;
+};
+
