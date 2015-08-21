@@ -3,6 +3,9 @@
     <head>
         <title>JavaScript Training</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
     </head>
     <body>
         
@@ -10,9 +13,11 @@
         
         </header>
         
-        <main>
+        <main class="container-fluid">
+            
+            <h1>Javascript Training</h1>
         
-            <section class="exercises">
+            <section class="exercises container-fluid">
             
                 <!-- EXERCISE 1 -->
                 <article id="exercise-1" class="exercise">
@@ -442,6 +447,138 @@ test();
                 
                 </article>
                 
+
+
+                <article id="exercise-21" class="exercise">
+                
+                    <h2>Exercise 21</h2>
+                    <p class="exercise-description">
+                        What’s the result of executing the following code? Why?
+                        <pre>
+var fullname='John Doe';
+
+var obj={
+    fullname:'Colin Ihrig',
+    prop:{
+        fullname:'Aurelio De Rosa',
+        getFullname:function(){
+            return this.fullname;
+        }
+    }
+};
+
+console.log(obj.prop.getFullname()); //Output: 'Aurelio De Rosa' because this keyword is doing reference to prop obj.object.
+var test=obj.prop.getFullname;
+console.log(test()); //Output: 'John Doe' because this keyword is doing reference to global object.
+
+                        </pre>
+                    </p>  
+
+                    <div id="result-21"></div>
+                
+                </article>
+                
+
+
+                <article id="exercise-22" class="exercise">
+                
+                    <h2>Exercise 22</h2>
+                    <p class="exercise-description">
+                        Fix the previous question’s issue so that the last console.log() prints Aurelio De Rosa. (Keep in mind call() and apply())
+                        <pre>
+var fullname='John Doe';
+
+var obj={
+    fullname:'Colin Ihrig',
+    prop:{
+        fullname:'Aurelio De Rosa',
+        getFullname:function(){
+            return this.fullname;
+        }
+    }
+};
+
+console.log(obj.prop.getFullname()); //Output: 'Aurelio De Rosa' because this keyword is doing reference to obj.prop object.
+var test=obj.prop.getFullname;
+console.log(test.apply(obj.prop)); //Output: 'Aurelio De Rosa' because this keyword is doing reference to  obj.prop object.
+                        </pre>
+                    </p>  
+
+                    <p>
+                        
+                    </p>
+                    <div id="result-22"></div>
+                
+                </article>
+
+
+                <article id="exercise-23" class="exercise">
+                
+                    <h2>Exercise 23</h2>
+                    <p class="exercise-description">
+                        Complete the expected values and justify:
+                        <pre>
+(function(){
+
+    var foo=1;
+
+    function bar(){
+        var foo=2;
+    }
+
+    bar();
+
+    console.log(foo);//OUTPUT: 1. Because global variable is not affected by local variable inside bar function. 
+
+    if(true){
+        var foo=3;
+    }
+
+    console.log(foo);//OUTPUT: 3. Because the global variable was reassigned in the above code.
+
+})();
+                        </pre>
+                    </p>  
+
+                    <p>
+                        
+                    </p>
+                    <div id="result-23"></div>
+                
+                </article>
+
+
+
+                <article id="exercise-24" class="exercise">
+                
+                    <h2>Exercise 24</h2>
+                    <p class="exercise-description">
+                        Complete the expected values and justify
+                        <pre>
+(function(){
+
+    function foo(x){
+        var baz=3;
+        return function(y){
+            console.log(x+y+(++baz));
+        }
+    }
+
+    var moo=foo(2);
+    moo(1);//WHAT VALUE RETURNS? WHY? 7. Because "x" is 2, "y" is 1 and "++baz" is equal to 4.
+    moo(1);//WHAT VALUE RETURNS? WHY? 7. Because "x" is 2, "y" is 1 and "++baz" is equal to 5 now.
+
+})();
+                        </pre>
+                    </p>  
+
+                    <p>
+                        
+                    </p>
+                    <div id="result-24"></div>
+                
+                </article>
+
             </section>
             
         </main>
